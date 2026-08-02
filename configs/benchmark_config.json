@@ -1,0 +1,50 @@
+{
+    "datasets": {
+        "VIVOS": {
+            "type": "vivos",
+            "path": "vivos"
+        },
+        "Custom_10h": {
+            "type": "lhotse",
+            "path": "custom_10h"
+        },
+        "FLEURS": {
+            "type": "hf_local",
+            "path": "fleurs"
+        },
+        "CommonVoice17": {
+            "type": "nemo_jsonl",
+            "path": "common_voice_17_0"
+        },
+        "VLSP2020": {
+            "type": "nemo_jsonl",
+            "path": "vlsp_2020"
+        }
+    },
+    "models": {
+        "Whisper Tiny (74M)": {
+            "type": "whisper",
+            "path": "openai/whisper-tiny"
+        },
+        "Whisper Small (244M)": {
+            "type": "whisper",
+            "path": "openai/whisper-small"
+        },
+        "Whisper Medium (769M)": {
+            "type": "whisper",
+            "path": "openai/whisper-medium"
+        },
+        "Whisper Large-v3 (1542M)": {
+            "type": "whisper",
+            "path": "openai/whisper-large-v3"
+        },
+        "Zipformer SSL 100h (68M)": {
+            "type": "sherpa",
+            "path": "zipformer_ssl_100h"
+        },
+        "Zipformer 30M 6000h": {
+            "type": "sherpa",
+            "path": "Zipformer-30M-RNNT-6000h"
+        }
+    }
+}

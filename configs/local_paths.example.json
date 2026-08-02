@@ -1,0 +1,7 @@
+{
+    "_comment": "Copy this file to local_paths.json and set your local dataset paths. local_paths.json is gitignored.",
+    "custom_10h": "C:/path/to/your/10h-benchmark-dataset",
+    "vlsp_2020": "",
+    "fleurs": "",
+    "common_voice_17_0": ""
+}

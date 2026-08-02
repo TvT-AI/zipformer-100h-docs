@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Large dataset files & model weights (GitHub 100MB limit)
+# /models/
+# /data/
+# *.onnx
+# *.pt
+# *.safetensors
+# *.bin
+# *.tar.gz
+# *.zip
+
+plot_loss_chart.py
+copy_logs.py
+# Local path overrides (personal machine paths, never commit)
+configs/local_paths.json
+
+# Caches, & temporary progress
+results/benchmark_progress.json
+*.log
+.cache/
+.venv/
+env/
+.DS_Store
