@@ -29,3 +29,33 @@ Per-sample logs: `results/logs/{model}/{dataset}.jsonl` — run `python src/main
 - `N/A` = Not evaluated locally as the dataset is not available in this study.
 - `‡` = WER > 100% due to hallucination — Whisper Tiny repeats/fabricates tokens on compressed meeting audio.
 - `[1]` = Benchmark results referenced from Yang et al., GigaSpeech 2 (2024), Table 3, Vietnamese baseline. These models were evaluated by the authors of the paper.
+
+# Models
+This directory contains inference-ready model files.
+## Zipformer SSL 100h (not included)
+Our custom model, fine-tuned via HuBERT self-supervised learning on 100h of Vietnamese data.
+ONNX files are already included in this repo under `zipformer_ssl_100h/`.
+> **Note:**  zipformer_ssl_100h model must be placed here manually (not distributed in this repo).
+> Contact the authors or generate from the training recipe.
+```
+models/zipformer_ssl_100h/
+├── encoder-epoch-9-avg-5.onnx   
+├── decoder-epoch-9-avg-5.onnx   
+├── joiner-epoch-9-avg-5.onnx    
+├── bpe.model                    
+└── tokens.txt                   
+```
+## Zipformer 30M 6000h (download from HuggingFace)
+```bash
+python -c "
+from huggingface_hub import snapshot_download
+snapshot_download(
+    repo_id='hynt/Zipformer-30M-RNNT-6000h',
+    local_dir='models/Zipformer-30M-RNNT-6000h',
+    ignore_patterns=['*.pt']   # skip jit checkpoint, only need ONNX
+)
+"
+```
+## Whisper models (auto-downloaded)
+Whisper models are **automatically downloaded** from HuggingFace when you run the benchmark.
+No manual setup needed. Models are cached by the `transformers` library.
