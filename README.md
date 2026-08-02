@@ -52,11 +52,11 @@ data/
 │       └── waves/
 │           ├── VIVOSDEV01/
 │           └── ...
-├── fleurs/                    # HuggingFace dataset saved to disk
+├── fleurs/                    # HuggingFace dataset
 ├── vlsp_2020/
 │   ├── metadata.jsonl
 │   └── wavs/
-├── common_voice_17_0/         # HuggingFace dataset saved to disk
+├── common_voice_17_0/         # HuggingFace dataset
 └── custom_10h/                # Private — skip if unavailable
     ├── recordings.jsonl
     ├── supervisions.jsonl
@@ -85,9 +85,6 @@ zipformer-100h-docs/
 ├── models/
 │   ├── README.md                      # Model download instructions
 │   └── zipformer_ssl_100h/            # Custom model ONNX files (included)
-├── scripts/
-│   ├── download_fleurs.py             # Auto-download FLEURS
-│   └── download_common_voice.py       # Auto-download Common Voice 17
 ├── src/
 │   ├── main.py                        # Benchmark runner
 │   ├── data/loaders.py                # Dataset loaders
