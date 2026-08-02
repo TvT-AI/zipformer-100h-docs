@@ -6,8 +6,8 @@ __pycache__/
 # Large dataset files & model weights (GitHub 100MB limit)
 # /models/
 # /data/
-# *.onnx
-# *.pt
+.onnx
+.pt
 # *.safetensors
 # *.bin
 # *.tar.gz
